@@ -5349,6 +5349,9 @@ components:
         bundle_cost_ttc:
           type: integer
           format: uint64
+        bundle_cost_ttc:
+          type: integer
+          format: uint64
         bundle_cost_float_ttc:
           type: number
           format: float

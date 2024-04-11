@@ -152,9 +152,9 @@
 		displayedValues.bundle_cost_ht = formatPrice(newItem.bundle_cost_ht);
 		if (displayedValues.bundle_cost_ttc === "Prix d'un lot TTC") {
 			newItem.bundle_cost_ttc = Math.round(
-				displayedValues.item_price_calc * newItem.amount_per_bundle
-			);
-		}
+			displayedValues.item_price_calc * newItem.amount_per_bundle
+		);
+	}
 		displayedValues.bundle_cost_ttc = formatPrice(newItem.bundle_cost_ttc);
 	}
 </script>
@@ -403,7 +403,7 @@
 							placeholder={displayedValues.bundle_cost_ttc}
 							on:change={(e) => {
 								newItem.bundle_cost_ht = Math.round(
-									// @ts-ignore
+								// @ts-ignore
 									parsePrice(e.target?.value) / (1 + (newItem.tva ?? 0) / 10000)
 								);
 								// @ts-ignore
